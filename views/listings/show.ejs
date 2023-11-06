@@ -1,3 +1,4 @@
+const locals = require("locals")
 <% layout("layouts/boilerplate") %>
     <!-- <script>
     let mapToken = "
@@ -14,21 +15,21 @@
             <img src="<%= listing.image.url %>" class="card-img-top show-img mb-2" alt="listing_image">
             <div class="card-body">
                 <!-- <p><b>Category : </b> -->
+                    
+                    <b>Owner : </b>
+                    <%= listing.owner.username %>
+                </p>
 
-                <b>Owner : </b>
-                <%= listing.owner.username %>
-                    </p>
-
-                    <h5><b>About this place</b></h5>
-                    <p class="card-text">
-                        <%=listing.description %>
-                    </p>
-                    <p class="card-text"><b> &#8377; <%=listing.price.toLocaleString("en-IN") %></b> /night</p>
-                    <p class="card-text">
-                        <%=listing.location %>,<b>
-                                <%=listing.country %>
-                            </b>
-                    </p>
+                <h5><b>About this place</b></h5>
+                <p class="card-text">
+                    <%=listing.description %>
+                </p>
+                <p class="card-text"><b> &#8377; <%=listing.price.toLocaleString("en-IN") %></b> /night</p>
+                <p class="card-text">
+                    <%=listing.location %>,<b>
+                            <%=listing.country %>
+                        </b>
+                </p>
             </div>
         </div>
     </div>
@@ -92,12 +93,12 @@
                                             <%= review.comment %>
                                                 </p>
                                         </div>
-                                        <%if(review.author._id.equals(res.locals.currUser._id)) { %>
-                                            <form class="mb-2" method="POST"
-                                                action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE">
-                                                <button class="btn btn-sm btn-dark">Delete</button>
-                                            </form>
-                                            <% } %>
+                                        <%if (currUser && review.author._id.equals(currUser._id)) { %>
+                                        <form class="mb-2" method="POST"
+                                            action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE">
+                                            <button class="btn btn-sm btn-dark">Delete</button>
+                                        </form>
+                                    <% } %>
                                     </div>
                                     <% } %>
                             </div>
