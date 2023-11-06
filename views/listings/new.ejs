@@ -1,0 +1,68 @@
+<% layout("/layouts/boilerplate") %>
+    <style>
+        #dropdown {
+            width: 355px;
+            height: 38px;
+            border-radius: 8px;
+            border: 1px solid rgba(192, 189, 189, 0.372);
+            padding-left: 5px;
+        }
+    </style>
+
+    <body>
+        <div class="row mt-3">
+            <div class="col-8 offset-2">
+                <h3><b>Create a New Listing </b></h3>
+                <form method="POST" action="/listings" novalidate class="needs-validation"
+                    enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="listing[title]" placeholder="Enter the Title" class="form-control"
+                            required>
+                        <div class="valid-feedback">Title looks good!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea type="text" name="listing[description]" placeholder="Write the Description"
+                            class="form-control" required></textarea>
+                        <div class="invalid-feedback">Please enter short Description!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload Image</label>
+                        <input type="file" name="listing[image]" class="form-control" required>
+                        <div class="valid-feedback">Perfect Picture!</div>
+                    </div>
+                    <!-- <div class="mb-3 ">
+                        <label for="category" class="form-label">Category* : " Arctic, Mountain, Camping, Iconic City,
+                            Castle, Pool, Boat, Ski-in/out, Beach "</label>
+                        <input type="text" name="listing[category]" placeholder="Enter the Category"
+                            class="form-control" required>
+                        <div class="invalid-feedback">Category must be from above mentioned!</div>
+                    </div> -->
+                    <div class="mb-3 ">
+                        <label for="price" class="form-label">Price</label>
+                        <input name="listing[price]" placeholder="Enter the Price" class="form-control" required>
+                        <div class="invalid-feedback">Price should be valid!</div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" name="listing[country]" placeholder="India" class="form-control"
+                                required>
+                            <div class="invalid-feedback">Country name should be valid!</div>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" name="listing[location]" placeholder="Kriti Nagar, New Delhi"
+                                class="form-control" required>
+                            <div class="invalid-feedback">Location should be valid!</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-dark add-btn mt-3">Create</button>
+
+                    <br><br>
+                </form>
+            </div>
+        </div>
+        </div>
+    </body>

@@ -1,0 +1,231 @@
+<% layout("layouts/boilerplate") %>
+    <style>
+        #filters {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            /* border: 1px solid black; */
+        }
+
+        .filter {
+            text-align: center;
+            margin-right: 1.81rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+            font-weight: 600;
+        }
+
+        .filter:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .filter p {
+            font-size: 0.8rem;
+        }
+
+        .tax-toggle {
+            border: 1px solid rgb(128, 121, 121);
+            border-radius: 1rem;
+            height: 3.2rem;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-left: 1.5rem;
+            margin-top: 12px;
+        }
+
+        .tax-info {
+            display: none;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+        @media screen and (max-width: 1201px){
+            .filterResponsive{
+                display: none;
+            }
+        }
+
+        #menuBtn{
+            display: none;
+            background-color: rgb(39, 121, 221);
+        }
+        @media screen and (max-width: 1200px){
+            #menuBtn{
+            display: block;
+        }
+        }
+        /* offcanvas-header */
+        .offcanvas-header{
+            background-color:  rgb(206, 204, 204);
+        }
+        .offcanvas-title{
+            color: black;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+    </style>
+
+    <body>
+        <div id="filters" >
+            <div class="filter filterResponsive"b>
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+
+            <div class="filter filterResponsive">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Iconic Cities</p>
+            </div>
+            <div class="filter filterResponsive">
+                <div><i class="fa-solid fa-mountain-sun"></i></div>
+                <p>Mountains</p>
+            </div>
+            <div class="filter filterResponsive">
+                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <p>Castles</p>
+            </div>
+            <div class="filter filterResponsive">
+                <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p>Amazing Pools</p>
+            </div>
+            <div class="filter filterResponsive">
+                <div><i class="fa-regular fa-snowflake"></i></div>
+                <p>Arctic</p>
+            </div>
+            <div class="filter filterResponsive">
+                <div><i class="fa-solid fa-sailboat"></i></div>
+                <p>Boat</p>
+            </div>
+            <div class="filter filterResponsive">
+                <div><i class="fa-solid fa-person-skiing"></i></div>
+                <p>Ski-in/out</p>
+            </div>
+            <div class="filter filterResponsive">
+                <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                <p>Beach</p>
+            </div>
+            <div class="filter filterResponsive">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
+
+            <div class="tax-toggle filterResponsive">
+                <div class="form-check-reverse form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Display total after
+                        taxes</label>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- same above feature it is for responsive design -->
+        <div class="offcanvas offcanvas-start" id="demo">
+            <div class="offcanvas-header">
+                <a class="navbar-brand" href="/listings"><i class="fa-brands fa-meta"></i></a>
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Wanderluster</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                <div id="filters" class="list-group list-group-flush">
+                    <div class="filter">
+                        <div><i class="fa-solid fa-fire"></i></div>
+                        <p>Trending</p>
+                    </div>
+
+                    <div class="filter">
+                        <div><i class="fa-solid fa-mountain-city"></i></div>
+                        <p>Iconic Cities</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-mountain-sun"></i></div>
+                        <p>Mountains</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-brands fa-fort-awesome"></i></div>
+                        <p>Castles</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-person-swimming"></i></div>
+                        <p>Amazing Pools</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-regular fa-snowflake"></i></div>
+                        <p>Arctic</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-sailboat"></i></div>
+                        <p>Boat</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-person-skiing"></i></div>
+                        <p>Ski-in/out</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                        <p>Beach</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-campground"></i></div>
+                        <p>Camping</p>
+                    </div>
+                    <hr style="background-color : black">
+                    <div class="tax-toggle">
+                        <div class="form-check-reverse form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Display total after
+                                taxes</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn btn-primary mt-3" id="menuBtn" data-bs-toggle="offcanvas" data-bs-target="#demo"><i class="fa-solid fa-angles-right"></i>&nbsp;&nbsp;Menu</button>
+        </div>
+
+
+
+        <!-- creating card -->
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+            <% for(let listing of allListings){ %>
+                <a href="/listings/<%= listing._id %>" class="listing-link">
+                    <div class="card col listing-card">
+                        <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
+                            style="height: 20rem" />
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    <%= listing.title %>
+                                </b> <br>
+                                &#8377; <%= listing.price.toLocaleString("en-IN")%>/night
+                                    <i class="tax-info">&nbsp; &nbsp; &nbsp;+18% GST</i>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+    </body>
+
+    <script>
+        let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+        taxSwitch.addEventListener("click", () => {
+            let taxInfo = document.getElementsByClassName("tax-info");
+            for (info of taxInfo) {
+                if (info.style.display != "inline") {
+                    info.style.display = "inline";
+                } else {
+                    info.style.display = "none";
+                }
+            }
+        })
+    </script>

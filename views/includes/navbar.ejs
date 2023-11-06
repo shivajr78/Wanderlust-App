@@ -1,0 +1,129 @@
+<style>
+  .search-btn,
+  .search-btn2 {
+    background-color: rgb(39, 121, 221);
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 0.8rem 0 0.8rem;
+
+
+  }
+
+  .search-btn:hover {
+    background-color: rgb(39, 121, 221);
+    color: #fff;
+  }
+
+  .search-btn i {
+    display: inline;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 870px) {
+    .search-btn {
+      display: none;
+    }
+  }
+
+  .search-btn2 {
+    display: none;
+  }
+
+  @media screen and (max-width: 869px) {
+    .search-btn2 {
+      display: block;
+    }
+    /* .search-inp{
+      height: 32px;
+      width: 200px;
+    } */
+  }
+
+  .search-inp {
+    border-radius: 20px;
+    padding: 0.5rem 4rem 0.5rem 4rem;
+    font-size: 1rem;
+  }
+
+  .custom-navbar-collapse {
+    background-color: rgb(206, 204, 204);
+    /* Change the background color here */
+  }
+
+  .user-btn {
+    margin-right: 125px;
+  }
+
+  #navPos {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .addbtn {
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 1201px) {
+    .addbtn {
+      display: none;
+    }
+  }
+
+  .resAddbtn {
+    display: none;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .resAddbtn {
+      display: block;
+    }
+  }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid custom-navbar-collapse">
+    <a class="navbar-brand" href="/listings"><i class="fa-brands fa-meta"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav nav-pos">
+        <a class="nav-link" id="navPos" href="/listings">Explore</a>
+      </div>
+
+
+      <div class="navbar-nav ms-auto">
+        <form action="/listings" class="d-flex" role="search">
+          <input class="form-control me-2 search-inp" type="search" placeholder="Search Destination">
+          <button class="btn search-btn" type="submit"><i
+              class="fa-solid fa-magnifying-glass"></i><b>Search</b></button>
+          <button class="btn search-btn2" type="submit"><b><i class="fa-solid fa-magnifying-glass"></i></b></button>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto dropdown user-btn">
+        <a class="nav-link addbtn" id="navPos" href="/listings/new" style="margin-right: 0px;">Airbnb your home</a>
+        <a class="nav-link resAddbtn" id="navPos" href="/listings/new" style="margin-right: 0px;">Airbnb &nbsp;<i class="fa-solid fa-plus"></i></a>
+
+        <% if(!currUser){ %> <!--res.locals used -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <a class="dropdown-item " href="/signup"><b>Sign up</b></a>
+              <a class="dropdown-item" href="/login">Log in</a>
+              <hr class="dropdown-divider">
+              <a class="nav-link" id="navPos" href="/listings/new">Airbnb your home</a>
+            </ul>
+          </div>
+          <% } %>
+            <% if(currUser){ %>
+              <a class="nav-link" href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                &nbsp;<b>Logout</b></a>
+              <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

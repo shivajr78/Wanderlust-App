@@ -1,0 +1,143 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+}
+/* Navbar */
+
+.navbar {
+  height: 4rem;
+  background-color:  rgb(206, 204, 204);
+}
+
+.fa-meta {
+  color: rgb(39, 121, 221);
+  font-size: 2rem;
+  transform: rotate(180deg);
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* .headTitle {
+  font-family: "Laila", serif;
+  color: rgb(39, 121, 221);
+  margin-left: -12px;
+  margin-top: 10px;
+  font-size: 1.6rem;
+  padding-right: -30px;
+} */
+
+/* Footer */
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: bottom;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info {
+  height: 6.4rem;
+  text-align: center;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: warp;
+  justify-content: center;
+  align-content: space-evenly;
+}
+
+/* Cards */
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  /* margin-left: 3rem; */
+}
+
+.card-img-top {
+  border-radius: 0.8rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 400 !important;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+/* Card Effects */
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* New page */
+
+.add-btn {
+  background-color: rgb(39, 121, 221) !important;
+  border: none !important;
+}
+
+/* Edit page */
+
+.edit-btn {
+  background-color: rgb(39, 121, 221) !important;
+  border: none !important;
+}
+
+/* Show page */
+
+.show-img {
+  height: 42vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* map  */
+#map {
+  height: 400px;
+  width: 80vh;
+}
