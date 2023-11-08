@@ -3,6 +3,8 @@ const Listing = require("../models/listing");
 
 // taking the listings route callback functionality here
 
+
+
 // Index route 
 module.exports.index = async (req, res) => {
     const allListings = await Listing.find({});
@@ -35,7 +37,7 @@ module.exports.showListing = async (req, res) => {
 
 // Create route
 module.exports.createListing = async (req, res, next) => {  //wrap Async is error handling wrap function require from utils file.
-    
+
     let url = req.file.path;
     let filename = req.file.filename;
     const newListing = new Listing(req.body.listing); // as we make name of input in form of(new.ejs) is object's key-value pair

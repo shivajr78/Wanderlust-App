@@ -1,0 +1,318 @@
+<% layout("layouts/boilerplate") %>
+    <style>
+        .section-two h1 {
+            text-align: center;
+        }
+
+        .image-two img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .section-one {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 15%;
+            padding-right: 20%;
+        }
+
+        .item-one h1 {
+            color: crimson;
+            font-weight: 900;
+        }
+
+        .item-one h2 {
+            font-weight: 900;
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 900;
+        }
+
+        .cell {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            padding-left: 10%;
+        }
+
+        .para {
+            margin-left: 10px;
+        }
+
+        .search-cell {
+            display: flex;
+            justify-content: space-between;
+            height: 55px;
+            width: 80%;
+            border: 2px solid rgb(157, 154, 154);
+            border-radius: 12px;
+            padding: 3px 20px 8px 15px;
+        }
+
+
+
+        .search-cell i {
+            color: crimson;
+            font-size: 1.5rem;
+            margin-top: 12px;
+            margin-right: 12px;
+        }
+
+        /* .item-two {
+            margin-top: 40px;
+            border: 1px solid crimson;
+            height: 90%;
+            width: 43.5%;
+            padding: 25px 50px 25px 50px;
+            border-radius: 15px;
+
+        } */
+
+        .logo {
+            color: rgb(39, 121, 221);
+            font-size: 12rem;
+            transform: rotate(180deg);
+        }
+
+        .HomeBtn {
+            color: crimson;
+            background-color: white;
+            margin-top: 18px;
+        }
+
+        .HomeBtn:hover {
+            background-color: crimson;
+        }
+
+        /* .explore {
+            margin-top: 10px;
+            border: 0.6px solid rgba(0, 0, 0, 0.577);
+            border-radius: 10px;
+            padding: 8px 0px 8px 6px;
+        } */
+        .explore {
+            margin-bottom: 8px;
+        }
+
+        .explore a {
+            text-decoration: none;
+            color: crimson;
+            font-size: 1rem;
+
+        }
+
+
+        .section-three {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 90px;
+        }
+
+        .section-three h2 {
+            text-align: center;
+        }
+
+        .image {
+            width: 200px;
+            height: 80px;
+            margin-left: 40%;
+
+        }
+
+
+        .row-card {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+            width: 90%;
+            border: 1px solid crimson;
+            border-radius: 15px;
+            align-items: center;
+            padding: 10px 30px 0 30px;
+            margin-left: 5%;
+        }
+
+        .logBtn {
+            height: 40px;
+            width: 28%;
+            border: 1px solid crimson;
+            border-radius: 10px;
+            background-color: crimson;
+            text-align: center;
+            padding-top: 6px;
+        }
+
+        .logBtn a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .signUpBtn {
+            height: 40px;
+            width: 45%;
+            border: 1px solid crimson;
+            border-radius: 10px;
+            background-color: crimson;
+            text-align: center;
+            padding-top: 6px;
+        }
+
+        .signUpBtn a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .signUpBtnlarge {
+            height: 40px;
+            width: 250px;
+            border: 1px solid crimson;
+            border-radius: 10px;
+            background-color: crimson;
+            display: none;
+            padding: 9px 0px 0px 85px;
+            margin-left: 16%;
+
+        }
+
+        .signUpBtnlarge a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 994px) {
+            .signUpBtnlarge {
+                display: grid;
+            }
+        }
+
+        @media screen and (max-width: 995px) {
+            .item-two {
+                display: none;
+            }
+
+            .search-cell {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 970px) {
+            .image {
+                margin-right: 54%;
+                margin-left: 30%;
+            }
+        }
+    </style>
+
+    <body>
+        <br>
+        <br>
+        <div class="section-one">
+            <div class="item-one">
+                <h1>Wanderlust it.</h1>
+                <h2>You could earn upto</h2>
+                <div class="price">₹4,240</div>
+                <h5><b>1 night</b> at an estimated ₹4,240 a night</h5>
+                <br>
+                <div class="search-cell">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div><b>Kriti Nagar, New Delhi</b>
+                        <p>Entire place・ 2 bedrooms</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="item-two">
+                <h5><b>Ready to Airbnb it?</b></h5>
+                <p></p>
+                <hr>
+                
+                <div class="explore">
+                    <a href="/listings"><b>Airbnb Your Home » </b></a>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle HomeBtn" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-house-circle-check"></i> &nbsp; <b>Airbnb Setup</b>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item " href="/signup"><b>Sign up</b></a>
+                        <a class="dropdown-item" href="/login">Log in</a>
+                    </ul>
+                </div> -->
+
+            <div class="item-two">
+                <h5><b>Ready to Airbnb it?</b></h5>
+                <i class="fa-brands fa-meta logo"></i>
+                <div class="explore">
+                    <a href="/listings"><b>Explore the listings » </b></a><br>
+                </div>
+                <div class="signUpBtn">
+                    <a href="/signup" style="width: 70px;"><b>Sign Up</b></a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div class="signUpBtnlarge">
+            <a href="/signup" style="width: 70px;"><b>Sign Up</b></a>
+        </div>
+        <br>
+        <div class="row-card">
+            <div class="head">
+                <h3><b>We’re here for you</b></h3>
+                <p><b>Log in to get help with your reservations, account, and more.</b></h>
+            </div>
+            <div class="logBtn">
+                <a href="/login"><b>Log in</b></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="section-two">
+            <h1><b>Airbnb it easily with Airbnb Setup</b></h1>
+            <br>
+            <div class="image-two">
+                <img src="https://a0.muscache.com/im/pictures/65214d06-ffb4-4b70-93c0-01d368e76649.jpg?im_w=2560&im_q=highq"
+                    alt="welcome all">
+            </div>
+            <br>
+
+            <br>
+            <div class="cell">
+                <div class="para">
+                    <h5><b>One-to-one guidance from a Superhost</b></h5>
+                    <p>We’ll match you with a Superhost in your area, who’ll guide you from your first question to your
+                        first guest – by phone, video call or chat.</p>
+                </div>
+                <div class="para">
+                    <h5><b>An experienced guest for your first booking</b></h5>
+                    <p>For your first booking, you can choose to welcome an experienced guest who has at least three
+                        stays
+                        and a good track record on Wanderlust.</p>
+                </div>
+                <div class="para">
+                    <h5><b>Specialized support from Wanderlust</b></h5>
+                    <p>For your first booking, you can choose to welcome an experienced guest who has at least three
+                        stays
+                        and a good track record on Wanderlust.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-three">
+            <img src="https://a0.muscache.com/im/pictures/cecbf134-6674-410f-9345-603716048771.jpg?im_w=480&im_q=highq"
+                alt="" class="image">
+            <br>
+            <h2>Airbnb your home with Wanderlust!</h2>
+        </div>
+
+    </body>

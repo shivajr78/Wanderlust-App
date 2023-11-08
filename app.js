@@ -88,6 +88,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "/public"))); //for css file
+app.use(express.static('public'));
 
 // use ejs-locals for all ejs templates:
 app.engine('ejs', ejsMate);
@@ -103,8 +104,8 @@ async function main() {
     await mongoose.connect(dbUrl);
 }
 
-app.get("/camping", (req, res) => {
-    res.send("Hello,Ammu!")
+app.get("/", (req, res) => {
+    res.render("listings/home.ejs");
 })
 
 
@@ -128,6 +129,6 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error.ejs", { message })
 })
 
-app.listen(8085, () => {
-    console.log("Server is listening to port 8085...");
+app.listen(8082, () => {
+    console.log("Server is listening to port 8082...");
 });
