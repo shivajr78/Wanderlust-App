@@ -118,10 +118,8 @@
         }
 
         .image {
-            width: 200px;
-            height: 80px;
-            margin-left: 40%;
 
+            text-align: center;
         }
 
 
@@ -139,12 +137,11 @@
 
         .logBtn {
             height: 40px;
-            width: 28%;
             border: 1px solid crimson;
             border-radius: 10px;
             background-color: crimson;
             text-align: center;
-            padding-top: 6px;
+            padding: 6px 15px 0px 15px;
         }
 
         .logBtn a {
@@ -155,7 +152,6 @@
 
         .signUpBtn {
             height: 40px;
-            width: 45%;
             border: 1px solid crimson;
             border-radius: 10px;
             background-color: crimson;
@@ -169,30 +165,17 @@
             font-weight: 500;
         }
 
-        .signUpBtnlarge {
-            height: 40px;
-            width: 250px;
-            border: 1px solid crimson;
-            border-radius: 10px;
-            background-color: crimson;
+        .signUpBtn2{
             display: none;
-            padding: 9px 0px 0px 85px;
-            margin-left: 16%;
-
+            margin-left: 15px;
+        }
+        .Btns{
+            display: flex;
+            justify-content: space-evenly;
+            
         }
 
-        .signUpBtnlarge a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        @media screen and (max-width: 994px) {
-            .signUpBtnlarge {
-                display: grid;
-            }
-        }
+    
 
         @media screen and (max-width: 995px) {
             .item-two {
@@ -200,15 +183,69 @@
             }
 
             .search-cell {
+               height: 65px;
+               width: 80%;
+            }
+        }
+        @media screen and (max-width: 773px) {
+            .search-cell {
+                height: 60px;
+                width: 85%;
+            }
+        }
+        @media screen and (max-width: 526px) {
+            .search-cell {
+                height: 55px;
+               width: 90%;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .search-cell {
+                height: 120px;
+               width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .image {
                 display: none;
             }
         }
 
-        @media screen and (max-width: 970px) {
-            .image {
-                margin-right: 54%;
-                margin-left: 30%;
+
+        @media screen and (max-width: 830px) {
+            .row-card {
+                height: 150px;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 150px;
             }
+
+            .Btns {
+                margin-bottom: 10px;
+                padding-bottom: 30px;
+            }
+            .signUpBtn2 {
+                display: grid;
+            }
+        }
+        @media screen and (max-width: 352px) {
+            .row-card {
+                height: 220px;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 150px;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            .para p {
+                font-size: 0.7rem;
+            }
+            .para h5 {
+                font-size: 0.9rem;
+            }
+           
         }
     </style>
 
@@ -231,24 +268,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="item-two">
-                <h5><b>Ready to Airbnb it?</b></h5>
-                <p></p>
-                <hr>
-                
-                <div class="explore">
-                    <a href="/listings"><b>Airbnb Your Home » </b></a>
-                </div>
-                <div class="btn-group">
-                    <button class="btn btn-secondary btn-lg dropdown-toggle HomeBtn" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-house-circle-check"></i> &nbsp; <b>Airbnb Setup</b>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <a class="dropdown-item " href="/signup"><b>Sign up</b></a>
-                        <a class="dropdown-item" href="/login">Log in</a>
-                    </ul>
-                </div> -->
+
 
             <div class="item-two">
                 <h5><b>Ready to Airbnb it?</b></h5>
@@ -263,18 +283,22 @@
 
         </div>
         </div>
-        <div class="signUpBtnlarge">
-            <a href="/signup" style="width: 70px;"><b>Sign Up</b></a>
-        </div>
+
         <br>
         <div class="row-card">
             <div class="head">
                 <h3><b>We’re here for you</b></h3>
                 <p><b>Log in to get help with your reservations, account, and more.</b></h>
             </div>
-            <div class="logBtn">
-                <a href="/login"><b>Log in</b></a>
+            <div class="Btns">
+                <div class="logBtn">
+                    <a href="/login" style="width: 100px;" ><b>Log in</b></a>
+                </div>
+                <div class="signUpBtn signUpBtn2">
+                    <a href="/signup" style="width: 100px;"><b>Sign Up</b></a>
+                </div>
             </div>
+
         </div>
         <br>
         <br>
@@ -309,8 +333,10 @@
             </div>
         </div>
         <div class="section-three">
-            <img src="https://a0.muscache.com/im/pictures/cecbf134-6674-410f-9345-603716048771.jpg?im_w=480&im_q=highq"
-                alt="" class="image">
+            <div class="image">
+                <img src="https://a0.muscache.com/im/pictures/cecbf134-6674-410f-9345-603716048771.jpg?im_w=480&im_q=highq"
+                    alt="">
+            </div>
             <br>
             <h2>Airbnb your home with Wanderlust!</h2>
         </div>
