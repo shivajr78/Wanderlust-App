@@ -1,5 +1,16 @@
+
 <% layout("layouts/boilerplate") %>
     <style>
+        .offer{
+            text-align: center;
+            height: 25px;
+            width: 100%;
+            background-color: crimson;
+            margin-top: 5px;
+            color: white;
+            font-weight: 500;
+        }
+
         .section-two h1 {
             text-align: center;
         }
@@ -13,8 +24,8 @@
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
-            padding-left: 15%;
-            padding-right: 20%;
+            padding-left: 10%;
+            padding-right: 14%;
         }
 
         .item-one h1 {
@@ -61,20 +72,14 @@
             margin-right: 12px;
         }
 
-        /* .item-two {
-            margin-top: 40px;
-            border: 1px solid crimson;
-            height: 90%;
-            width: 43.5%;
-            padding: 25px 50px 25px 50px;
+        .item-two {
+            margin-top: 5px;
+        }
+
+        .item-two img{
+            width: 300px;
+            height: auto;
             border-radius: 15px;
-
-        } */
-
-        .logo {
-            color: rgb(39, 121, 221);
-            font-size: 12rem;
-            transform: rotate(180deg);
         }
 
         .HomeBtn {
@@ -141,7 +146,7 @@
             border-radius: 10px;
             background-color: crimson;
             text-align: center;
-            padding: 6px 15px 0px 15px;
+            padding: 6px 15px 6px 15px;
         }
 
         .logBtn a {
@@ -165,15 +170,8 @@
             font-weight: 500;
         }
 
-        .signUpBtn2{
-            display: none;
-            margin-left: 15px;
-        }
-        .Btns{
-            display: flex;
-            justify-content: space-evenly;
-            
-        }
+        
+        
 
     
 
@@ -206,35 +204,36 @@
             }
         }
 
-        @media screen and (max-width: 480px) {
-            .image {
-                display: none;
+        @media screen and (max-width: 544px) {
+            .image img {
+                width: 250px;
+                height: auto;
             }
         }
 
 
         @media screen and (max-width: 830px) {
             .row-card {
-                height: 150px;
+                height: 130px;
                 display: flex;
                 flex-direction: column;
-                padding-bottom: 150px;
+                padding-bottom: 120px;
+            }
+            .logBtn a{
+                padding-bottom: 15px;
             }
 
-            .Btns {
-                margin-bottom: 10px;
-                padding-bottom: 30px;
-            }
-            .signUpBtn2 {
-                display: grid;
-            }
+            
         }
-        @media screen and (max-width: 352px) {
+        @media screen and (max-width: 582px) {
             .row-card {
-                height: 220px;
+                height: 160px;
                 display: flex;
                 flex-direction: column;
-                padding-bottom: 150px;
+                padding-bottom: 50px;
+            }
+            .logBtn a{
+                padding-bottom: 15px;
             }
         }
 
@@ -250,6 +249,9 @@
     </style>
 
     <body>
+        <div class="offer">
+            <p>Learn about Guest Favourites, the most loved homes on WanderLust!</p>
+        </div>
         <br>
         <br>
         <div class="section-one">
@@ -272,8 +274,11 @@
 
             <div class="item-two">
                 <h5><b>Ready to Airbnb it?</b></h5>
-                <i class="fa-brands fa-meta logo"></i>
-                <div class="explore">
+               <img src="https://images.contentstack.io/v3/assets/bltb428ce5d46f8efd8/blt5724ed0dd88be3d3/5dc0bd73daa3472043dc811f/2UV408K77PP7.jpg?crop=100p,84.47p,x0,y15.52p&width=1050&height=591&auto=webp" alt="">
+               
+               <div class="explore">
+                <br>
+
                     <a href="/listings"><b>Explore the listings » </b></a><br>
                 </div>
                 <div class="signUpBtn">
@@ -290,15 +295,9 @@
                 <h3><b>We’re here for you</b></h3>
                 <p><b>Log in to get help with your reservations, account, and more.</b></h>
             </div>
-            <div class="Btns">
                 <div class="logBtn">
-                    <a href="/login" style="width: 100px;" ><b>Log in</b></a>
+                    <a href="/login" style="width: 100px;" ><b>Log in or sign up</b></a>
                 </div>
-                <div class="signUpBtn signUpBtn2">
-                    <a href="/signup" style="width: 100px;"><b>Sign Up</b></a>
-                </div>
-            </div>
-
         </div>
         <br>
         <br>

@@ -1,12 +1,11 @@
 <style>
-  .search-btn,
-  .search-btn2 {
+  .search-btn {
     background-color: crimson;
     color: #fff;
     border-radius: 20px;
-    padding: 0 0.8rem 0 0.8rem;
+    padding: 0 0.5rem 0 0.5rem;
     border: 1.2px solid crimson;
-
+    font-weight: 500;
   }
 
   .search-btn:hover {
@@ -17,44 +16,33 @@
   .search-btn i {
     display: inline;
     margin-right: 0.5rem;
-    font-size: 0.9rem;
   }
 
-  @media screen and (max-width: 870px) {
-    .search-btn {
-      display: none;
-    }
-  }
-
-  .search-btn2 {
-    display: none;
-  }
-
-  @media screen and (max-width: 869px) {
-    .search-btn2 {
-      display: block;
-    }
-    /* .search-inp{
-      height: 32px;
-      width: 200px;
-    } */
-  }
 
   .search-inp {
     border-radius: 20px;
-    padding: 0.5rem 4rem 0.5rem 4rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
     font-size: 1rem;
   }
 
-  .custom-navbar-collapse {
-    /* background-color: crimson; */
-    /* Change the background color here */
-  }
 
   .user-btn {
-    margin-right: 125px;
+    margin-right: 10px;
   }
 
+  .globe{
+    margin-top: 8px;
+    margin-left: 10px;
+    
+  }
+  .globe i{
+    color: grey;
+  }
+  .globe a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+  }
   #navPos {
     font-weight: 500;
     font-size: 1rem;
@@ -89,6 +77,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav nav-pos">
+        <a class="nav-link" id="navPos" href="/">Home</a>
+      </div>
+      <div class="navbar-nav nav-pos">
         <a class="nav-link" id="navPos" href="/listings">Explore</a>
       </div>
 
@@ -96,15 +87,15 @@
       <div class="navbar-nav ms-auto">
         <form action="/listings" class="d-flex" role="search">
           <input class="form-control me-2 search-inp" type="search" placeholder="Search Destination">
-          <button class="btn search-btn" type="submit"><i
-              class="fa-solid fa-magnifying-glass"></i><b>Search</b></button>
-          <button class="btn search-btn2" type="submit"><b><i class="fa-solid fa-magnifying-glass"></i></b></button>
+          <button class="btn search-btn" type="submit">Search</button>
+          <!-- <button class="btn search-btn2" type="submit"><b><i class="fa-solid fa-magnifying-glass"></i></b></button> -->
         </form>
       </div>
 
       <div class="navbar-nav ms-auto dropdown user-btn">
+        <a class="nav-link addbtn" id="navPos" href="/">Home</a>
         <a class="nav-link addbtn" id="navPos" href="/listings/new" style="margin-right: 0px;">Airbnb your home</a>
-        <a class="nav-link resAddbtn" id="navPos" href="/listings/new" style="margin-right: 0px;">Airbnb &nbsp;<i class="fa-solid fa-plus"></i></a>
+        <a class="nav-link resAddbtn" id="navPos" href="/listings/new" style="margin-right: 0px; ">Airbnb your home</a>
 
         <% if(!currUser){ %> <!--res.locals used -->
           <div class="nav-item dropdown">
@@ -120,9 +111,11 @@
           </div>
           <% } %>
             <% if(currUser){ %>
-              <a class="nav-link" href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>
-                &nbsp;<b>Logout</b></a>
+              <a class="nav-link" href="/logout"><b>Logout</b></a>
               <% } %>
+              <div class="globe">
+                <a href=""><i class="fa-solid fa-globe"></i> &nbsp; English (IN)</a>
+              </div>
       </div>
     </div>
   </div>
