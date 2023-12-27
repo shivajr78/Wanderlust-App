@@ -10,8 +10,8 @@ body {
 /* Navbar */
 
 .navbar {
-  height: 4rem;
-  background-color: #ebebeb;
+  height: 5rem;
+  background-color: rgb(196, 228, 244);
 }
 
 .fa-meta {
@@ -33,42 +33,117 @@ body {
   padding-right: -30px;
 } */
 
-/* Footer */
 
-.f-info-links,
-.f-info-socials,
-.f-info-brand {
-  width: 100%;
-  display: flex;
-  align-items: bottom;
-  justify-content: center;
-  margin-top: 8px;
+
+/* Footer */
+.line {
+  border-width: 1px;
+  width: 90%;
+  border-color: grey;
+  margin: 0 auto;
 }
 
 .f-info-socials i {
   font-size: 1.2rem;
-  margin-right: 1rem;
+  margin-right: 1.4rem;
 }
-
+.f-info-brand,
 .f-info-links a {
   text-decoration: none;
-  color: #222222;
+  color: #222222; 
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .f-info-links a:hover {
   text-decoration: underline;
-}
+} 
 
 .f-info {
-  height: 6.4rem;
-  text-align: center;
-  background-color: #ebebeb;
+  height: 4.5rem;
   display: flex;
-  flex-direction: column;
-  flex-wrap: warp;
-  justify-content: center;
-  align-content: space-evenly;
+  justify-content: space-between;
+  padding: 25px 40px 0px 45px;
 }
+.f-info-tags{
+  display: flex;
+  justify-content: row;
+}
+.f-info-socials{
+  display: flex;
+  justify-content: row;
+}
+.globe-icon {
+  font-size: 0.9rem;
+  margin-right: 12px;
+}
+.globe-icon a{
+  text-decoration: none;
+  color: #222222;
+  font-weight: 500;
+}
+.globe-icon a:hover {
+  text-decoration: underline;
+} 
+.globe-icon i{
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+.cost-icon{
+  font-size: 0.9rem;
+  margin-right: 30px;
+}
+.cost-icon a{
+  text-decoration: none;
+  color: #222222 ;
+  font-weight: 500;
+}
+.cost-icon a:hover {
+  text-decoration: underline;
+} 
+.cost-icon i{
+  margin-left: 10px;
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 830px){
+  .f-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 830px){
+  .f-info-socials{
+    margin-top: 18px;
+  }
+}
+@media screen and (max-width: 520px){
+  .f-info{
+    margin-bottom: 10px;
+  }
+  
+  .f-info-tags{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .f-info-socials{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+  }
+  .globe-icon{
+    margin-bottom: 5px;
+  }
+}
+
+
+
+
+
 
 /* Cards */
 

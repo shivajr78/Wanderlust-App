@@ -21,7 +21,7 @@
 
   .search-inp {
     border-radius: 20px;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 0.5rem 4rem 0.5rem 3rem;
     font-size: 1rem;
   }
 
@@ -30,22 +30,29 @@
     margin-right: 10px;
   }
 
-  .globe{
+  .globe {
     margin-top: 8px;
     margin-left: 10px;
-    
+
   }
-  .globe i{
+
+  .globe i {
     color: grey;
   }
-  .globe a{
+
+  .globe a {
     text-decoration: none;
     color: black;
-    font-weight: 400;
+    font-weight: 500;
   }
+
   #navPos {
     font-weight: 500;
     font-size: 1rem;
+  }
+
+  .hover a:hover {
+    text-decoration: underline;
   }
 
   .addbtn {
@@ -67,6 +74,12 @@
       display: block;
     }
   }
+
+  #navbarNavAltMarkup {
+    background-color: rgb(196, 228, 244);
+    padding: 15px 20px 18px 20px;
+    text-align: left;
+  }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
@@ -76,9 +89,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav nav-pos">
+      <div class="navbar-nav nav-pos hover">
+        <a class="nav-link addbtn" id="navPos" href="/">Home</a>
       </div>
-      <div class="navbar-nav nav-pos">
+      <div class="navbar-nav nav-pos hover">
         <a class="nav-link" id="navPos" href="/listings">Explore</a>
       </div>
 
@@ -91,10 +105,13 @@
         </form>
       </div>
 
+
       <div class="navbar-nav ms-auto dropdown user-btn">
-        <a class="nav-link addbtn" id="navPos" href="/">Home</a>
-        <a class="nav-link addbtn" id="navPos" href="/listings/new" style="margin-right: 0px;">Airbnb your home</a>
-        <a class="nav-link resAddbtn" id="navPos" href="/listings/new" style="margin-right: 0px; ">Airbnb your home</a>
+
+        <a class="nav-link addbtn hover" id="navPos" href="/listings/new" style="margin-right: 0px;">Airbnb your
+          home</a>
+        <a class="nav-link resAddbtn hover" id="navPos" href="/listings/new" style="margin-right: 0px; ">Airbnb your
+          home</a>
 
         <% if(!currUser){ %> <!--res.locals used -->
           <div class="nav-item dropdown">
@@ -105,16 +122,17 @@
               <a class="dropdown-item " href="/signup"><b>Sign up</b></a>
               <a class="dropdown-item" href="/login">Log in</a>
               <hr class="dropdown-divider">
-              <a class="nav-link" id="navPos" href="/listings/new">Airbnb your home</a>
+              <a class="nav-link " id="navPos" href="/listings/new">Airbnb your home</a>
+              <a class="nav-link " id="navPos" href="/terms">Help Center</a>
             </ul>
           </div>
           <% } %>
             <% if(currUser){ %>
               <a class="nav-link" href="/logout"><b>Logout</b></a>
               <% } %>
-              <div class="globe">
-                <a href=""><i class="fa-solid fa-globe"></i> &nbsp; English (IN)</a>
-              </div>
+                <div class="globe">
+                  <a href=""><i class="fa-solid fa-globe hover" style="color: black;"></i> &nbsp;English (IN)</a>
+                </div>
       </div>
     </div>
   </div>

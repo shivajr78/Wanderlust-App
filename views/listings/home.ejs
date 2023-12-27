@@ -1,16 +1,21 @@
-
 <% layout("layouts/boilerplate") %>
     <style>
-        .offer{
+        .offer {
             text-align: center;
-            height: 25px;
-            width: 100%;
+            height: 55px;
             background-color: crimson;
             margin-top: 5px;
             color: white;
             font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-
+        .btn-close button {
+           padding-bottom: 35px;
+           color: white;
+        }
+        
         .section-two h1 {
             text-align: center;
         }
@@ -63,8 +68,6 @@
             padding: 3px 20px 8px 15px;
         }
 
-
-
         .search-cell i {
             color: crimson;
             font-size: 1.5rem;
@@ -76,7 +79,7 @@
             margin-top: 10px;
         }
 
-        .item-two img{
+        .item-two img {
             width: 300px;
             height: auto;
             border-radius: 15px;
@@ -170,10 +173,10 @@
             font-weight: 500;
         }
 
-        
-        
 
-    
+
+
+
 
         @media screen and (max-width: 995px) {
             .item-two {
@@ -181,26 +184,29 @@
             }
 
             .search-cell {
-               height: 65px;
-               width: 80%;
+                height: 65px;
+                width: 80%;
             }
         }
+
         @media screen and (max-width: 773px) {
             .search-cell {
                 height: 60px;
                 width: 85%;
             }
         }
+
         @media screen and (max-width: 526px) {
             .search-cell {
                 height: 55px;
-               width: 90%;
+                width: 90%;
             }
         }
+
         @media screen and (max-width: 500px) {
             .search-cell {
                 height: 120px;
-               width: 90%;
+                width: 90%;
             }
         }
 
@@ -219,12 +225,14 @@
                 flex-direction: column;
                 padding-bottom: 120px;
             }
-            .logBtn a{
+
+            .logBtn a {
                 padding-bottom: 15px;
             }
 
-            
+
         }
+
         @media screen and (max-width: 582px) {
             .row-card {
                 height: 160px;
@@ -232,7 +240,8 @@
                 flex-direction: column;
                 padding-bottom: 50px;
             }
-            .logBtn a{
+
+            .logBtn a {
                 padding-bottom: 15px;
             }
         }
@@ -241,17 +250,22 @@
             .para p {
                 font-size: 0.7rem;
             }
+
             .para h5 {
                 font-size: 0.9rem;
             }
-           
+
         }
     </style>
 
     <body>
-        <div class="offer">
-            <p>Learn about Guest Favourites, the most loved homes on WanderLust!</p>
+        <div class="offer alert  alert-dismissible fade show" role="alert">
+            Learn about Guest Favourites, the most loved homes on WanderLust!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+        <!-- <div class="">
+            <p>Learn about Guest Favourites, the most loved homes on WanderLust!</p>
+        </div> -->
         <br>
         <br>
         <div class="section-one">
@@ -274,10 +288,11 @@
 
             <div class="item-two">
                 <h5><b>Ready to Airbnb it?</b></h5>
-               <img src="https://images.contentstack.io/v3/assets/bltb428ce5d46f8efd8/blt5724ed0dd88be3d3/5dc0bd73daa3472043dc811f/2UV408K77PP7.jpg?crop=100p,84.47p,x0,y15.52p&width=1050&height=591&auto=webp" alt="">
-               
-               <div class="explore">
-                <br>
+                <img src="https://images.contentstack.io/v3/assets/bltb428ce5d46f8efd8/blt5724ed0dd88be3d3/5dc0bd73daa3472043dc811f/2UV408K77PP7.jpg?crop=100p,84.47p,x0,y15.52p&width=1050&height=591&auto=webp"
+                    alt="">
+
+                <div class="explore">
+                    <br>
 
                     <a href="/listings"><b>Explore the listings » </b></a><br>
                 </div>
@@ -295,9 +310,9 @@
                 <h3><b>We’re here for you</b></h3>
                 <p><b>Log in to get help with your reservations, account, and more.</b></h>
             </div>
-                <div class="logBtn">
-                    <a href="/login" style="width: 100px;" ><b>Log in or sign up</b></a>
-                </div>
+            <div class="logBtn">
+                <a href="/login" style="width: 100px;"><b>Log in or sign up</b></a>
+            </div>
         </div>
         <br>
         <br>

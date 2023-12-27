@@ -104,8 +104,21 @@ async function main() {
     await mongoose.connect(dbUrl);
 }
 
+
 app.get("/", (req, res) => {
     res.render("listings/home.ejs");
+})
+app.get("/company-details", (req, res) => {
+    res.render("listings/company-details.ejs");
+})
+app.get("/terms", (req, res) => {
+    res.render("listings/terms.ejs");
+})
+app.get("/privacy", (req, res) => {
+    res.render("listings/privacy.ejs");
+})
+app.get("/careers", (req, res) => {
+    res.render("listings/careers.ejs");
 })
 
 
@@ -129,6 +142,6 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error.ejs", { message })
 })
 
-app.listen(8082, () => {
+app.listen(8089, () => {
     console.log("Server is listening to port 8082...");
 });

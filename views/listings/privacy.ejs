@@ -1,0 +1,193 @@
+<style>
+    .heading {
+        color: gray;
+        font-weight: 500;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        /* margin-left: 30px;
+        margin-right: 60px; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 99%;
+    }
+
+    .container-one {
+        width: 100%;
+    }
+
+    .container-img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .terms {
+        width: 65%;
+    }
+
+    .Main-loginBtn {
+        display: none;
+        width: 75%;
+        border: 2px solid crimson;
+        color: white;
+        background-color: crimson;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .Main-loginBtn a {
+        border: 2px solid crimson;
+        text-decoration: none;
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 600;
+        background-color: crimson;
+        text-align: center;
+    }
+
+    .loginBox {
+        width: 30%;
+        border: 1px solid rgb(215, 209, 209);
+        border-radius: 12px;
+        height: 25vh;
+        padding: 15px;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .loginBox a {
+        border: 2px solid crimson;
+        padding: 5px 80px;
+        text-decoration: none;
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 600;
+        background-color: crimson;
+        border-radius: 8px;
+        margin: 6px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+
+
+    .icon {
+        color: rgb(61, 118, 209);
+        margin-right: 15px;
+    }
+
+    .container-content {
+        font-size: 0.94rem;
+        font-weight: 400;
+    }
+
+    .paragarph {
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+
+    @media screen and (max-width: 992px) {
+        .loginBox {
+            display: none;
+        }
+
+        .Main-loginBtn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .terms {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+    }
+
+    .line {
+        border-width: 1.5px;
+        width: 100%;
+        border-color: grey;
+        margin: 0 auto;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+</style>
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <div class="main-container">
+            <div class="Main-loginBtn"><a href="/login">Log in or sign up</a> </div>
+            <div class="container">
+                <div class="terms">
+                    <p class="heading">Legal terms</p>
+                    <h2><b>Airbnb Privacy</b></h2>
+                    <br>
+                    <div class="container-one">
+                        <div class="container-img">
+                            <img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt1218bbc6d8c51315/61dcad421757dc6aed2ade70/airbnb-privacy.jpeg"
+                                alt="WanderLust">
+                        </div>
+                    </div>
+                    <br><br>
+                    <h4><b>Privacy Policy</b></h4>
+                    <p class="paragraph">Our Privacy Policy explains what personal information we collect, how we use
+                        personal information, how personal information is shared, and privacy rights.</p>
+                    <br>
+                   <p><b>Supplemental Privacy Policy Documents:</b></p>
+                   <ul>
+                    <li><u><b>Outside the United States</b></u></li>
+                    <li><u><b>California, Colorado, Connecticut, Utah, Vermont, and Virginia</b></u></li>
+                    <li><u><b>Cookie Policy</b></u></li>
+                    <li><u><b>Enterprise Customers and Airbnb for Work</b></u></li>
+                    <li><u><b>Colombia Only</b></u></li>
+                    <li><u><b>Non-User DAC7 Privacy Notice</b></u></li>
+                   </ul>
+                   <br>
+
+                    <h4><b>Related articles</b></h4>
+                    <br>
+                    <p style="color: gray; font-weight: 500;"> Airbnb basics</p>
+                    <h6><b><u>Verifying your identity
+                            </u></b></h6>
+                    <p style="color: gray; font-weight: 500;">Your security is important to us. Check out the steps we
+                        take to not only verify your identity, but to keep it safe.
+                    </p>
+                    <br>
+                    <hr class="line">
+                    <br>
+                    <p style="color: gray; font-weight: 500;"> Host</p>
+                    <p><b><u>Create a Danish unique code</u></b></p>
+                    <p style="color: gray; font-weight: 400;"> As of 31 October 2023, Danish tax authorities (Skat.dk)
+                        have turned off the ability to create a new unique code. Hosts will not be able to c…</p>
+                    <br>
+                    <hr class="line">
+                    <br>
+                    <p><b><u>About the updates to our Terms</u></b></p>
+                    <p style="color: gray; font-weight: 400;"> Please review this information about updates to our Terms.</p>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+                <div class="loginBox">Get help with your reservations, account, and more. <br>
+                    <a href="/login">Log in or sign up</a>
+                </div>
+            </div>
+        </div>
+    </body>
